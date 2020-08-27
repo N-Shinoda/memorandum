@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- <link rel="icon" type="image/png" href="./icon/favicon-16x16.png"> -->
+
+<link rel="stylesheet" href="./css/style.css" type="text/css">
+
+<title>C# Memorandum</title>
+</head>
+<body>
+<header>
+    <h2>C# Memorandum</h2><br>
+    <p>author N-Shinoda</p>
+</header>
+<h4 id="insatll">インストール</h4>
+<p>ubuntuにmonoをインストールする。</p>
+<pre><code>
+$ sudo apt install gnupg ca-certificates
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+$ echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+$ sudo apt update
+$ sudo apt install mono-devel
+</code></pre>
+
+<h4 id="build">ビルド</h4>
+<p>コマンドラインからビルドする。</p>
+<pre><code>
+$ mcs ファイル名.cs
+GUI
+$ mcs -target:winexe -pkg:dotnet ファイル名.cs
+</code></pre>
+
+<h4 id="run">実行</h4>
+<p>コマンドラインから実行する。</p>
+<pre><code>
+$ mono ファイル名.exe
+</code></pre>
+
+</body>
+</html>
